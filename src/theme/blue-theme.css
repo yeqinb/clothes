@@ -1,0 +1,264 @@
+:root {
+    --primary-color: #409eff;
+    --primary-light: #66b1ff;
+    --primary-dark: #1a7cff;
+    --primary-gradient: linear-gradient(135deg, #409eff 0%, #1a7cff 100%);
+    --secondary-gradient: linear-gradient(135deg, #66b1ff 0%, #409eff 100%);
+    --background-gradient: linear-gradient(135deg, #f5f7fa 0%, #e4e7f4 100%);
+    --success-color: #67c23a;
+    --warning-color: #e6a23c;
+    --danger-color: #f56c6c;
+    --info-color: #909399;
+    --text-primary: #303133;
+    --text-regular: #606266;
+    --text-secondary: #909399;
+    --text-placeholder: #c0c4cc;
+    --border-color: #dcdfe6;
+    --border-color-light: #e4e7ed;
+    --border-color-lighter: #ebeef5;
+    --border-color-extra-light: #f2f6fc;
+    --card-shadow: 0 4px 12px rgba(64, 158, 255, 0.1);
+    --card-hover-shadow: 0 8px 24px rgba(64, 158, 255, 0.15);
+    --transition-base: all 0.3s ease;
+    --border-radius-base: 8px;
+    --border-radius-small: 4px;
+
+    /* 字体大小变量 */
+    --font-size-extra-large: 20px;
+    --font-size-large: 18px;
+    --font-size-medium: 16px;
+    --font-size-base: 15px;
+    --font-size-small: 14px;
+    --font-size-extra-small: 13px;
+
+    /* 组件尺寸变量 */
+    --component-height-large: 48px;
+    --component-height-medium: 42px;
+    --component-height-small: 36px;
+    --component-height-extra-small: 32px;
+}
+
+/* 覆盖 Element Plus 主题色 */
+:root {
+    --el-color-primary: var(--primary-color);
+    --el-color-primary-light-3: var(--primary-light);
+    --el-color-primary-dark-2: var(--primary-dark);
+
+    /* 覆盖 Element Plus 字体大小 */
+    --el-font-size-extra-large: var(--font-size-extra-large);
+    --el-font-size-large: var(--font-size-large);
+    --el-font-size-medium: var(--font-size-medium);
+    --el-font-size-base: var(--font-size-base);
+    --el-font-size-small: var(--font-size-small);
+    --el-font-size-extra-small: var(--font-size-extra-small);
+
+    /* 覆盖 Element Plus 组件高度 */
+    --el-component-size-large: var(--component-height-large);
+    --el-component-size: var(--component-height-medium);
+    --el-component-size-small: var(--component-height-small);
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Element Plus 组件样式增强 */
+.el-card {
+    border-radius: var(--border-radius-base);
+    box-shadow: var(--card-shadow);
+    transition: var(--transition-base);
+    border: none;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    font-size: var(--font-size-base);
+}
+
+.el-card:hover {
+    box-shadow: var(--card-hover-shadow);
+    transform: translateY(-2px);
+}
+
+.el-button {
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(64, 158, 255, 0.1);
+    transition: var(--transition-base);
+    border: none;
+    font-size: var(--font-size-base);
+    font-weight: 500;
+}
+
+.el-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(64, 158, 255, 0.15);
+}
+
+.el-button--primary {
+    background: var(--primary-gradient);
+    color: white;
+    height: var(--component-height-medium);
+}
+
+.el-button--success {
+    background: var(--success-color);
+    color: white;
+    height: var(--component-height-medium);
+}
+
+.el-button--warning {
+    background: var(--warning-color);
+    color: white;
+    height: var(--component-height-medium);
+}
+
+.el-button--danger {
+    background: var(--danger-color);
+    color: white;
+    height: var(--component-height-medium);
+}
+
+/* 表格样式增强 */
+.el-table {
+    border-radius: var(--border-radius-base);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    font-size: var(--font-size-base);
+}
+
+.el-table .el-table__cell {
+    border-color: var(--border-color-light);
+    padding: 12px 0;
+}
+
+.el-table th.el-table__cell {
+    background-color: #fafafa;
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: var(--font-size-medium);
+}
+
+/* 输入框样式优化 */
+.el-input__wrapper {
+    border-radius: 6px;
+    box-shadow: 0 1px 2px rgba(64, 158, 255, 0.05);
+    transition: var(--transition-base);
+    height: var(--component-height-medium);
+}
+
+.el-input__wrapper:hover {
+    box-shadow: 0 2px 6px rgba(64, 158, 255, 0.1);
+}
+
+.el-input {
+    font-size: var(--font-size-base);
+}
+
+/* 卡片标题样式 */
+.el-card__header {
+    font-weight: 600;
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border-color-light);
+    padding: 20px;
+    font-size: var(--font-size-large);
+}
+
+/* 菜单样式 */
+.el-menu {
+    border: none;
+}
+
+.el-menu-item {
+    transition: var(--transition-base);
+    font-size: var(--font-size-base);
+    height: var(--component-height-large);
+    line-height: var(--component-height-large);
+}
+
+.el-menu-item:hover {
+    background-color: #ecf5ff;
+    color: var(--primary-color);
+}
+
+.el-menu-item.is-active {
+    background-color: #ecf5ff;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* 对话框样式 */
+.el-dialog {
+    border-radius: var(--border-radius-base);
+    overflow: hidden;
+}
+
+.el-dialog__header {
+    background: linear-gradient(135deg, #409eff 0%, #1a7cff 100%);
+    color: white;
+    padding: 20px;
+}
+
+.el-dialog__title {
+    color: white;
+    font-weight: 500;
+    font-size: var(--font-size-large);
+}
+
+.el-dialog__headerbtn .el-dialog__close {
+    color: white;
+    font-size: var(--font-size-large);
+}
+
+.el-dialog__headerbtn:hover .el-dialog__close {
+    color: white;
+    opacity: 0.8;
+}
+
+.el-dialog__body {
+    padding: 20px;
+    font-size: var(--font-size-base);
+}
+
+/* 分页组件 */
+.el-pagination {
+    font-size: var(--font-size-base);
+}
+
+.el-pagination .el-pager li {
+    font-size: var(--font-size-base);
+    min-width: var(--component-height-small);
+    height: var(--component-height-small);
+    line-height: var(--component-height-small);
+}
+
+/* 标签 */
+.el-tag {
+    font-size: var(--font-size-small);
+    height: var(--component-height-small);
+    line-height: var(--component-height-small);
+}
+
+/* 描述列表 */
+.el-descriptions__label {
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.el-descriptions__content {
+    font-size: var(--font-size-base);
+    color: var(--text-regular);
+}
